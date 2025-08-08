@@ -1,0 +1,460 @@
+/* Root and Base Styles */
+:root {
+  --primary: #d4a762;
+  --dark: #2c2926;
+  --light: #f8f5f2;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #d4a762;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4a762;
+}
+
+/* Hover Dropdown */
+.hover-dropdown {
+  position: relative;
+}
+
+.hover-dropdown > a {
+  display: block;
+  padding:1px 0;
+}
+
+.hover-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  pointer-events: auto;
+  margin-top: 1px; /* closes hover gap */
+}
+
+/* Keep dropdown visible when hovering it */
+.hover-dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #222;
+  color: #d4a762;
+}
+
+
+/* --- MOBILE MENU TOGGLE --- */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hover-dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .hover-dropdown:hover .dropdown-menu {
+    display: none; /* Don't use hover on mobile */
+  }
+
+  .hover-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    padding-left: 30px;
+  }
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 6px;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+/* Service Page Hero */
+.service-hero {
+  background: var(--light);
+  padding: 80px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid #e2dfda;
+}
+.service-hero h1 {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+.service-hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Service Banner */
+.service-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: #d4a762;
+  text-align: center;
+}
+.service-banner h2 {
+  font-size: 3.2rem;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Info Section Layout */
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 90px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.info-section.reverse {
+  flex-direction: row-reverse;
+}
+.info-text {
+  flex: 1;
+  padding-top: 40px;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #333;
+}
+.info-img {
+  flex: 1;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.info-img img {
+  width: 80%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Service Details */
+.service-details {
+  background: #fff;
+  padding: 60px 20px;
+}
+.service-details h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.service-details ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  color: #444;
+}
+.service-details p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2c2926;
+  margin-bottom: 20px;
+}
+.service-details .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.service-details .btn:hover {
+  background: #c29b53;
+  transform: translateY(-2px);
+}
+
+/* Circle Image Pair */
+.circle-image-pair {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.circle-image-pair img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.circle-image-pair img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--light);
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+}
+.contact-form button {
+  padding: 14px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #b88a50;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: brightness(0) invert(1); /* Optional: makes dark logos show on dark bg */
+}
+
+/* Slide-in animation */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+.slide-in-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .info-section.reverse {
+    flex-direction: column !important; /* ⬅️ This fixes it */
+  }
+
+  .info-img img {
+    max-width: 200px;
+  }
+
+  .service-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .info-text {
+    font-size: 1.2rem;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
