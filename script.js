@@ -19,8 +19,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-  document.querySelector('.back-to-top').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.getElementById('instagram-gallery');
+  const items = Array.from(gallery.querySelectorAll('.insta-item'));
+  const btn = document.getElementById('show-more-btn');
+
+  // Hide everything after the first 5
+  if (items.length > 5) {
+    items.slice(5).forEach(el => el.classList.add('hidden'));
+    if (btn) btn.hidden = false;
+  } else {
+    if (btn) btn.remove();
+  }
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      items.slice(5).forEach(el => {
+        el.classList.remove('hidden');
+        // trigger fade animation
+        requestAnimationFrame(() => el.classList.add('fade-in'));
+      });
+
+      // IMPORTANT: re-run Instagram's embed processor so newly visible posts render
+      if (window.instgrm && instgrm.Embeds && typeof instgrm.Embeds.process === 'function') {
+        instgrm.Embeds.process();
+      }
+
+      btn.remove();
+    });
+  }
+});
 
