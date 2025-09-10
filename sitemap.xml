@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
+
   <url>
-    <loc>https://woodenaccentja.com/index.html</loc>
+    <loc>https://woodenaccentja.com/</loc>
     <priority>1.0</priority>
   </url>
 
-  <!-- Service Pages -->
-  <url><loc>https://woodenaccentja.com/cabinetry.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Custom-Wardrobes-&-Closet-Units.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Repairing-Warped-or-Sticking-Doors.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Doors-&-Door-Frames.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Bathroom-Vanities-&-Storage.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Built-in-Entertainment-Centers.html</loc></url>
-  <url><loc>https://woodenaccentja.com/bedroom.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Home-Bar-&-Counter-Design.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Interior-Trim-&-Skirting-Boards.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Office-&-Reception-Area-Builds.html</loc></url>
-  <url><loc>https://woodenaccentja.com/Commercial-Cabinetry-&-Fixtures.html</loc></url>
+  <url>
+    <loc>https://woodenaccentja.com/cabinetry.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Custom-Wardrobes-&amp;-Closet-Units.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Repairing-Warped-or-Sticking-Doors.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Doors-&amp;-Door-Frames.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Bathroom-Vanities-&amp;-Storage.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Built-in-Entertainment-Centers.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/bedroom.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Home-Bar-&amp;-Counter-Design.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Interior-Trim-&amp;-Skirting-Boards.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Office-&amp;-Reception-Area-Builds.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://woodenaccentja.com/Commercial-Cabinetry-&amp;-Fixtures.html</loc>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
