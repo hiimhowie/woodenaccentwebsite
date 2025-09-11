@@ -18,13 +18,13 @@
   <meta property="og:description" content="30+ years of trusted Jamaican carpentry. From kitchen cabinets to wardrobes and wooden doors, Wooden Accent Ja builds custom pieces that last a lifetime.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://woodenaccentja.com/">
-  <meta property="og:image" content="https://woodenaccentja.com/hero.webp">
+  <meta property="og:image" content="https://woodenaccentja.com/hero.avif">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wooden Accent Ja | Custom Woodwork in Jamaica">
   <meta name="twitter:description" content="Handcrafted Jamaican cabinetry, wardrobes, vanities & wooden doors. Built with care, built to last.">
-  <meta name="twitter:image" content="https://woodenaccentja.com/hero.webp">
+  <meta name="twitter:image" content="https://woodenaccentja.com/hero.avif">
 
   <!-- Favicon & Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
@@ -239,7 +239,7 @@
   min-height: 30vh;
   display: flex;
   align-items: center;
-  padding: 70px 40px;
+  padding: 80px 40px;
   color: white;
 }
 
@@ -513,6 +513,31 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image {
+    padding-top: 20px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
   /* Quote Block */
   .quote-break blockquote {
     font-size: 1.8rem;
@@ -553,54 +578,21 @@
     gap: 10px;
   }
 
+  /* Navigation (optional burger) */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+}
 .hamburger {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
 }
-/* Mobile (up to 768px) */
+
 @media (max-width: 768px) {
-  /* Hero */
-  .hero-bg {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-    min-height: auto;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 100%;
-  }
-
-  .hero-image {
-    display: flex;
-    flex-direction: column; /* stack img + button */
-    align-items: center;
-    gap: 15px;
-    padding-top: 20px;
-  }
-
-  .hero-image img {
-    width: 160px;
-    height: 160px;
-    border: 3px solid #fff2dc;
-  }
-
-  /* Navbar */
   .hamburger {
     display: block;
   }
@@ -620,45 +612,62 @@
   .nav-links.active {
     display: flex;
   }
+}
+.instagram-cta {
+  text-align: center;
+  margin-top: 40px;
+}
 
-  /* Quote Block */
-  .quote-break blockquote {
-    font-size: 1.8rem;
-  }
+.instagram-cta .btn {
+  font-size: 1.1rem;
+  padding: 14px 28px;
+}
+.hidden {
+  display: none;
+}
 
-  /* Why Accent Section */
-  .why-accent-content {
+#show-more-btn {
+  margin-top: 30px;
+  font-size: 1rem;
+  padding: 12px 24px;
+}
+@media screen and (max-width: 768px) {
+  .hero-bg {
     flex-direction: column;
+    padding: 20px 20px;
+    min-height: 20vh;
     text-align: center;
   }
 
-  .carousel-btn.left {
-    left: 10px;
-  }
-
-  .carousel-btn.right {
-    right: 10px;
-  }
-
-  /* Services Grid */
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-tile {
-    font-size: 1rem;
-    padding: 20px;
-  }
-
-  /* Testimonials */
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CTA buttons */
-  .cta-buttons {
+  .hero-content {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .hero-text .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    padding-top: 20px;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff2dc;
   }
 }
 
@@ -970,39 +979,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
