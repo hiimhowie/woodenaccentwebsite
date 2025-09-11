@@ -588,7 +588,7 @@
 
   .hero-image {
     display: flex;
-    flex-direction: column; /* ✅ stack img + button */
+    flex-direction: column; /* stack img + button */
     align-items: center;
     gap: 15px;
     padding-top: 20px;
@@ -620,7 +620,48 @@
   .nav-links.active {
     display: flex;
   }
+
+  /* Quote Block */
+  .quote-break blockquote {
+    font-size: 1.8rem;
+  }
+
+  /* Why Accent Section */
+  .why-accent-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-btn.left {
+    left: 10px;
+  }
+
+  .carousel-btn.right {
+    right: 10px;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-tile {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA buttons */
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
+
   </style>
 </head>
 <body>
@@ -929,6 +970,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
