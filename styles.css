@@ -499,7 +499,7 @@ footer {
 .gallery-btn-wrap { text-align: center; margin-top: 1rem; }
 
 .blog-section {
-  padding: 80px 20px; /* ⬆️ added more breathing room top & bottom */
+  padding: 80px 20px;
   background: #f8f5f2;
 }
 
@@ -510,19 +510,24 @@ footer {
   color: var(--dark);
 }
 
-/* FLEXBOX instead of grid */
+/* Flexbox layout */
 .blog-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  align-items: stretch; /* ⬅️ forces all blog-cards to equal height */
 }
 
 .blog-card {
-  flex: 1 1 300px; /* min width 300px, grows if space allows */
-  max-width: 400px; /* prevents them from stretching too wide */
+  flex: 1 1 300px;       /* min width 300px, grows if space allows */
+  max-width: 400px;
+  display: flex;         /* ⬅️ make blog-card itself a flex container */
+  flex-direction: column;/* stack content vertically */
+  justify-content: space-between; /* pushes button to bottom */
+  
   background: white;
-  padding: 30px 20px; /* ⬆️ a little extra padding inside */
+  padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: center;
@@ -543,6 +548,11 @@ footer {
   font-size: 1rem;
   margin-bottom: 20px;
 }
+
+.blog-card a {
+  margin-top: auto; /* ensures button sits at bottom */
+}
+
 
 
 
