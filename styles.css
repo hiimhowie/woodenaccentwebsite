@@ -498,3 +498,40 @@ footer {
 
 .gallery-btn-wrap { text-align: center; margin-top: 1rem; }
 
+.blog-section {
+  padding: 60px 20px;
+  background: #f8f5f2;
+}
+.blog-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.blog-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+.blog-card h3 {
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+.blog-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+
