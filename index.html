@@ -591,45 +591,69 @@
   color: white;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  /* Hero */
   .hero-bg {
     flex-direction: column;
-    padding: 20px 20px;
-    min-height: 20vh;
+    padding: 20px;
     text-align: center;
+    min-height: auto;
   }
 
   .hero-content {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 
   .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     line-height: 1.2;
   }
 
   .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 100%;
   }
 
-  .hero-text .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
   .hero-image {
+    display: flex;
+    flex-direction: column; /* ✅ stack img + button */
+    align-items: center;
+    gap: 15px;
     padding-top: 20px;
   }
 
   .hero-image img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border: 3px solid #fff2dc;
   }
+
+  /* Navbar */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 6px;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
+
 
   </style>
 </head>
@@ -939,6 +963,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
