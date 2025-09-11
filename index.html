@@ -516,32 +516,49 @@
 @media (max-width: 768px) {
   /* Hero Section */
    .hero-bg {
-    flex-direction: column;
-    padding: 20px 20px;
-    min-height: 10vh;
+    display: flex;
+    flex-direction: column;   /* force vertical stack */
+    justify-content: center;  /* center vertically */
+    align-items: center;      /* center horizontally */
+    min-height: 100vh;        /* exactly 1 screen tall */
+    padding: 20px;            /* small but consistent padding */
     text-align: center;
   }
-   .hero-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 10px;
+
+  .hero-content {
+    flex-direction: column;   /* stack text + image */
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;         /* keep content narrow */
   }
 
   .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;        /* smaller headline */
+    margin-bottom: 10px;
   }
 
   .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
   }
 
   .hero-image {
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;                /* ensures button stacks under image */
+    padding-top: 10px;
   }
 
   .hero-image img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-text .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 
   /* Quote Block */
@@ -947,6 +964,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
