@@ -550,7 +550,20 @@ footer {
 }
 
 .blog-card a {
-  margin-top: auto; /* ensures button sits at bottom */
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.blog-card a:hover {
+  background: #b4894e; /* darker gold highlight */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 
