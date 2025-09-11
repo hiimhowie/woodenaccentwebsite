@@ -515,7 +515,13 @@
 }
 @media (max-width: 768px) {
   /* Hero Section */
-  .hero-content {
+   .hero-bg {
+     background-size: contain;   /* show full image instead of cropping */
+     background-position: top;   /* anchor it to the top */
+     padding: 20px 10px;         /* shrink top/bottom padding */
+     min-height: auto;           /* let content define height */
+   }
+   .hero-content {
     flex-direction: column;
     text-align: center;
     padding: 40px 20px;
@@ -941,6 +947,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
