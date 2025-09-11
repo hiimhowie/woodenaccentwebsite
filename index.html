@@ -515,15 +515,16 @@
 }
 @media (max-width: 768px) {
   /* Hero Section */
-   .hero-bg {
+    .hero-bg {
     display: flex;
-    flex-direction: column;   /* force vertical stack */
-    justify-content: center;  /* center vertically */
-    align-items: center;      /* center horizontally */
-    min-height: 100vh;        /* exactly 1 screen tall */
-    padding: 10px;            /* small but consistent padding */
+    flex-direction: column;   
+    justify-content: flex-start;  /* ⬅️ push content to top */
+    align-items: center;
+    min-height: 100vh;            /* still full screen */
+    padding: 40px 20px 20px;      /* more top padding, less bottom */
     text-align: center;
   }
+
 
   .hero-content {
     flex-direction: column;   /* stack text + image */
@@ -964,6 +965,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
