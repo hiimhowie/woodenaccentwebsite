@@ -499,39 +499,51 @@ footer {
 .gallery-btn-wrap { text-align: center; margin-top: 1rem; }
 
 .blog-section {
-  padding: 60px 20px;
+  padding: 80px 20px; /* ⬆️ added more breathing room top & bottom */
   background: #f8f5f2;
 }
+
 .blog-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
   color: var(--dark);
 }
+
+/* FLEXBOX instead of grid */
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
+
 .blog-card {
+  flex: 1 1 300px; /* min width 300px, grows if space allows */
+  max-width: 400px; /* prevents them from stretching too wide */
   background: white;
-  padding: 25px;
+  padding: 30px 20px; /* ⬆️ a little extra padding inside */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: center;
   transition: transform 0.3s ease;
 }
+
 .blog-card:hover {
   transform: translateY(-5px);
 }
+
 .blog-card h3 {
   color: var(--dark);
   margin-bottom: 15px;
 }
+
 .blog-card p {
   color: #555;
   font-size: 1rem;
   margin-bottom: 20px;
 }
+
+
 
 
