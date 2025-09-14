@@ -459,6 +459,8 @@ footer {
 }
 
 
+/* --- Instagram Gallery Styles --- */
+
 /* Force Instagram embeds to stretch properly */
 .insta-item blockquote.instagram-media {
   width: 100% !important;
@@ -467,7 +469,7 @@ footer {
   margin: 0 !important;
 }
 
-/* Hide by default (items after the first 3 get this class from JS) */
+/* Hidden by default (JS toggles this) */
 .insta-item.hidden {
   display: none;
 }
@@ -481,18 +483,27 @@ footer {
   to   { opacity: 1; transform: none; }
 }
 
-/* Grid layout */
+/* Flexbox layout for consistent sizing */
 .instagram-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* mobile & small screens */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
-@media (min-width: 1024px) {
-  .instagram-gallery {
-    grid-template-columns: repeat(5, 1fr); /* large desktop */
-  }
+/* Each Instagram item = uniform size */
+.insta-item {
+  flex: 0 1 320px;   /* base width per tile */
+  max-width: 320px;  /* locks uniform size */
+  margin: 0 auto;
 }
+
+/* Button wrapper */
+.gallery-btn-wrap {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 
 /* Button wrapper */
 .gallery-btn-wrap {
@@ -568,6 +579,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
