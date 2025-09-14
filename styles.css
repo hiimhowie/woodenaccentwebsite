@@ -464,6 +464,8 @@ footer {
 /* Section wrapper */
 .gallery-section {
   padding: 60px 0;
+  max-width: 80%;
+  margin: 0 auto; 
 }
 
 .gallery-section h2 {
@@ -606,6 +608,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
