@@ -489,6 +489,10 @@ footer {
 .insta-item blockquote.instagram-media:hover {
   transform: scale(1.02);
 }
+/* Safety: hide all items after the 3rd on page load */
+#instagram-gallery .insta-item:nth-child(n+4) {
+  display: none;
+}
 
 /* Hidden by default (JS toggles this) */
 .insta-item.hidden {
@@ -605,6 +609,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
