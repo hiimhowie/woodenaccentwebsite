@@ -20,34 +20,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const gallery = document.getElementById('instagram-gallery');
-  const items = Array.from(gallery.querySelectorAll('.insta-item'));
-  const btn = document.getElementById('show-more-btn');
-
-  // Hide everything after the first 5
-  if (items.length > 5) {
-    items.slice(5).forEach(el => el.classList.add('hidden'));
-    if (btn) btn.hidden = false;
-  } else {
-    if (btn) btn.remove();
-  }
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      items.slice(5).forEach(el => {
-        el.classList.remove('hidden');
-        // trigger fade animation
-        requestAnimationFrame(() => el.classList.add('fade-in'));
-      });
-
-      // IMPORTANT: re-run Instagram's embed processor so newly visible posts render
-      if (window.instgrm && instgrm.Embeds && typeof instgrm.Embeds.process === 'function') {
-        instgrm.Embeds.process();
-      }
-
-      btn.remove();
+btn.addEventListener('click', () => {
+  if (!expanded) {
+    // Reveal all hidden posts
+    items.slice(3).forEach(el => {
+      el.classList.remove('hidden');
+      el.classList.add('fade-in');
     });
+
+    // 🔑 Force Instagram to re-render them
+    if (window.instgrm && instgrm.Embeds?.process) {
+      instgrm.Embeds.process();
+    }
+
+    btn.textContent = "Hide";
+    expanded = true;
+  } else {
+    // Hide everything after the 3rd again
+    items.slice(3).forEach(el => el.classList.add('hidden'));
+    btn.textContent = "Show More";
+    expanded = false;
+
+    gallerySection.scrollIntoView({ behavior: "smooth" });
   }
 });
+
 
