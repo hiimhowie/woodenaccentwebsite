@@ -270,6 +270,7 @@ body {
 .service-details {
   background: #fff;
   padding: 60px 20px;
+  text-align: center;
 }
 .service-details h2 {
   font-size: 1.8rem;
@@ -624,6 +625,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
