@@ -461,12 +461,32 @@ footer {
 
 /* --- Instagram Gallery Styles --- */
 
+/* Section wrapper */
+.gallery-section {
+  padding: 60px 0;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+
 /* Force Instagram embeds to stretch properly */
 .insta-item blockquote.instagram-media {
   width: 100% !important;
   min-width: 0 !important;
   max-width: 100% !important;
   margin: 0 !important;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.insta-item blockquote.instagram-media:hover {
+  transform: scale(1.02);
 }
 
 /* Hidden by default (JS toggles this) */
@@ -483,33 +503,43 @@ footer {
   to   { opacity: 1; transform: none; }
 }
 
-/* Flexbox layout for consistent sizing */
+/* Gallery grid - cap at 5 per row */
 .instagram-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-/* Each Instagram item = uniform size */
-.insta-item {
-  flex: 0 1 320px;   /* base width per tile */
-  max-width: 320px;  /* locks uniform size */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1600px; /* ≈ 5 × 320px */
   margin: 0 auto;
 }
 
+/* Each item fills its grid cell */
+.insta-item {
+  width: 100%;
+}
+
 /* Button wrapper */
 .gallery-btn-wrap {
   text-align: center;
   margin-top: 1rem;
 }
 
-
-/* Button wrapper */
-.gallery-btn-wrap {
-  text-align: center;
-  margin-top: 1rem;
+/* Show more button */
+#show-more-btn {
+  display: inline-block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
+
+#show-more-btn:hover {
+  background: #b4894e;
+}
+
 
 
 .blog-section {
@@ -579,6 +609,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
