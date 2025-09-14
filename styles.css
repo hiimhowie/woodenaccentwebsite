@@ -459,7 +459,7 @@ footer {
 }
 
 
-/* Force Instagram to respect your sizing */
+/* Force Instagram embeds to stretch properly */
 .insta-item blockquote.instagram-media {
   width: 100% !important;
   min-width: 0 !important;
@@ -467,36 +467,39 @@ footer {
   margin: 0 !important;
 }
 
-/* Hidden by default (for items 4+) */
-.insta-item.hidden { display: none; }
+/* Hide by default (items after the first 3 get this class from JS) */
+.insta-item.hidden {
+  display: none;
+}
 
-/* Fancy fade-in when revealed */
-.insta-item.fade-in { animation: fadeIn .35s ease both; }
+/* Fade-in animation */
+.insta-item.fade-in {
+  animation: fadeIn .35s ease both;
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: none; }
 }
 
+/* Grid layout */
 .instagram-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* mobile */
+  grid-template-columns: repeat(3, 1fr); /* mobile & small screens */
   gap: 16px;
 }
 
 @media (min-width: 1024px) {
   .instagram-gallery {
-    grid-template-columns: repeat(5, 1fr); /* desktop */
+    grid-template-columns: repeat(5, 1fr); /* large desktop */
   }
 }
 
-/* optional: quick fade */
-.fade-in { 
-  opacity: 0; transform: translateY(6px);
-  animation: fadeIn .25s ease forwards;
+/* Button wrapper */
+.gallery-btn-wrap {
+  text-align: center;
+  margin-top: 1rem;
 }
-@keyframes fadeIn { to { opacity: 1; transform: none; } }
 
-.gallery-btn-wrap { text-align: center; margin-top: 1rem; }
 
 .blog-section {
   padding: 80px 20px;
@@ -565,6 +568,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
