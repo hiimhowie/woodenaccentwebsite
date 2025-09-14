@@ -508,7 +508,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  max-width: 1600px; /* ≈ 5 × 320px */
+  max-width: 1400px; /* ensures max 5 fit in a row */
   margin: 0 auto;
 }
 
@@ -606,6 +606,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
 
 
 
