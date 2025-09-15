@@ -626,6 +626,21 @@ footer {
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
+.logo {
+  display: flex;
+  align-items: center;   /* keeps text vertically centered with the image */
+  gap: 8px;              /* space between image and text */
+  text-decoration: none; /* optional: remove underline */
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;           /* set text color */
+}
+
+.logo img {
+  height: 40px;          /* adjust logo size */
+  width: auto;
+}
+
 
 
 
