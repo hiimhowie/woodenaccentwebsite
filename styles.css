@@ -30,13 +30,6 @@ body {
   z-index: 1000;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #d4a762;
-  text-decoration: none;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -641,6 +634,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
