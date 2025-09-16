@@ -627,13 +627,14 @@ footer {
   text-decoration: none; /* optional: remove underline */
   font-weight: bold;
   font-size: 1.2rem;
-  color: #000;           /* set text color */
+  color: #d4a762;          /* set text color */
 }
 
 .logo img {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
