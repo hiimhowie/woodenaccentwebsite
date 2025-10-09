@@ -470,7 +470,7 @@ footer {
   color: var(--dark);
 }
 
-/* Flexbox layout for the gallery */
+/* Flexbox layout for the gallery - UPDATED */
 .instagram-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -479,9 +479,8 @@ footer {
 }
 
 .insta-item {
-  flex: 0 0 calc(33.333% - 20px); /* 3 items per row */
-  max-width: calc(33.333% - 20px);
-  min-width: 250px;
+  flex: 0 1 320px;  /* Changed to uniform sizing */
+  max-width: 320px; /* Uniform max width */
   margin-bottom: 20px;
 }
 
@@ -532,17 +531,17 @@ footer {
   margin-top: 20px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments - UPDATED */
 @media (max-width: 900px) {
   .insta-item {
-    flex: 0 0 calc(50% - 20px); /* 2 items per row on medium screens */
-    max-width: calc(50% - 20px);
+    flex: 0 1 300px; /* Slightly smaller on tablets */
+    max-width: 300px;
   }
 }
 
 @media (max-width: 600px) {
   .insta-item {
-    flex: 0 0 100%; /* 1 item per row on small screens */
+    flex: 0 1 100%; /* Full width on mobile */
     max-width: 100%;
   }
   
@@ -634,6 +633,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
