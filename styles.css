@@ -455,10 +455,9 @@ footer {
 
 
 /* --- Instagram Gallery Styles --- */
-
-/* Instagram Gallery Styles */
+/* Instagram Gallery Styles - UPDATED */
 .gallery-section {
-  max-width: 90%;
+  max-width: 1200px; /* Use max-width instead of percentage */
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -470,21 +469,20 @@ footer {
   color: var(--dark);
 }
 
-/* Flexbox layout for the gallery - UPDATED */
+/* Flexbox layout for the gallery */
 .instagram-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* This centers the items */
   gap: 20px;
 }
 
 .insta-item {
-  flex: 0 1 320px;  /* Changed to uniform sizing */
-  max-width: 320px; /* Uniform max width */
-  margin-bottom: 20px;
+  flex: 0 1 320px; /* Uniform sizing */
+  max-width: 320px;
 }
 
-/* Hidden items (initially hidden beyond the first row) */
+/* Hidden items */
 .insta-item.hidden {
   display: none;
 }
@@ -531,26 +529,24 @@ footer {
   margin-top: 20px;
 }
 
-/* Responsive adjustments - UPDATED */
+/* Responsive adjustments - FIXED */
 @media (max-width: 900px) {
   .insta-item {
-    flex: 0 1 300px; /* Slightly smaller on tablets */
+    flex: 0 1 300px;
     max-width: 300px;
   }
 }
 
 @media (max-width: 600px) {
   .insta-item {
-    flex: 0 1 100%; /* Full width on mobile */
-    max-width: 100%;
+    flex: 0 1 100%; /* Full width but still centered */
+    max-width: 400px; /* Add a reasonable max-width */
   }
   
   .gallery-section {
-    max-width: 95%;
-    padding: 40px 10px;
+    padding: 40px 15px;
   }
 }
-
 .blog-section {
   padding: 80px 20px;
   background: #f8f5f2;
@@ -633,6 +629,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
