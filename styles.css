@@ -455,110 +455,55 @@ footer {
 
 
 /* --- Instagram Gallery Styles --- */
-/* Instagram Gallery Styles - UPDATED */
-.gallery-section {
-  max-width: 1200px; /* Use max-width instead of percentage */
-  margin: 0 auto;
-  padding: 60px 20px;
-}
 
-.gallery-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: var(--dark);
-}
-
-/* Flexbox layout for the gallery */
-.instagram-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* This centers the items */
-  gap: 20px;
-}
-
-.insta-item {
-  flex: 0 1 320px; /* Uniform sizing */
-  max-width: 320px;
-  margin: 0;
-}
-
-/* Hidden items */
-.insta-item.hidden {
-  display: none;
-}
-
-/* Instagram embed styling */
+/* Force Instagram embeds to stretch properly */
 .insta-item blockquote.instagram-media {
   width: 100% !important;
   min-width: 0 !important;
   max-width: 100% !important;
   margin: 0 !important;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
 }
 
-.insta-item blockquote.instagram-media:hover {
-  transform: scale(1.02);
+/* Hidden by default (JS toggles this) */
+.insta-item.hidden {
+  display: none;
 }
 
-/* Button styling */
+/* Fade-in animation */
+.insta-item.fade-in {
+  animation: fadeIn .35s ease both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Flexbox layout for consistent sizing */
+.instagram-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Each Instagram item = uniform size */
+.insta-item {
+  flex: 0 1 320px;   /* base width per tile */
+  max-width: 320px;  /* locks uniform size */
+  margin: 0 auto;
+}
+
+/* Button wrapper */
 .gallery-btn-wrap {
   text-align: center;
-  margin: 30px 0;
+  margin-top: 1rem;
 }
 
-#show-more-btn {
-  padding: 12px 24px;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
 
-#show-more-btn:hover {
-  background: #b4894e;
-}
-
-.instagram-cta {
+/* Button wrapper */
+.gallery-btn-wrap {
   text-align: center;
-  margin-top: 20px;
-}
-
-/* Responsive adjustments - FIXED */
-@media (max-width: 900px) {
-  .insta-item {
-    flex: 0 1 300px;
-    max-width: 300px;
-  }
-}
-  @media (max-width: 600px) {
-  .gallery-section {
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 40px 15px 40px 25px; /* ← More left padding (25px) than right (15px) */
-  }
-  
-  .instagram-gallery {
-    justify-content: center; /* Keep centered */
-    gap: 16px;
-  }
-  
-  .insta-item {
-    flex: 0 1 280px;
-    max-width: 280px;
-    margin: 0 auto; /* Keep centered within the gallery */
-  }
-}
-  .gallery-section {
-    padding: 40px 15px;
-  }
-}
+  margin-top: 1rem;
 .blog-section {
   padding: 80px 20px;
   background: #f8f5f2;
@@ -641,6 +586,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
