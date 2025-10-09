@@ -504,6 +504,45 @@ footer {
 .gallery-btn-wrap {
   text-align: center;
   margin-top: 1rem;
+}
+.gallery-section {
+  padding: 60px 0;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+
+.instagram-media:hover {
+  transform: scale(1.02);
+}
+
+/* Nice little fade on reveal */
+.instagram-media.fade-in { 
+  animation: fadeIn .3s ease both; 
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+#show-more-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#show-more-btn:hover {
+  background: #b4894e;
+}
 .blog-section {
   padding: 80px 20px;
   background: #f8f5f2;
@@ -586,6 +625,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
