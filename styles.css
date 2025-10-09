@@ -536,12 +536,6 @@ footer {
     max-width: 300px;
   }
 }
-
-@media (max-width: 600px) {
- .insta-item {
-    flex: 0 1 280px;  /* Smaller width so 3 can fit better */
-    max-width: 280px; /* But still maintains uniform size */
-  }
   
   .gallery-section {
     padding: 40px 15px;
@@ -629,6 +623,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
