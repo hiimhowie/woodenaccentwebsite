@@ -538,9 +538,21 @@ footer {
   }
 }
   @media (max-width: 600px) {
+  .gallery-section {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 40px 15px 40px 25px; /* ← More left padding (25px) than right (15px) */
+  }
+  
+  .instagram-gallery {
+    justify-content: center; /* Keep centered */
+    gap: 16px;
+  }
+  
   .insta-item {
-    flex: 0 1 280px;  /* Smaller width so 3 can fit better */
-    max-width: 280px; /* But still maintains uniform size */
+    flex: 0 1 280px;
+    max-width: 280px;
+    margin: 0 auto; /* Keep centered within the gallery */
   }
 }
   .gallery-section {
@@ -629,6 +641,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
