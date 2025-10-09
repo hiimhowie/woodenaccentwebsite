@@ -480,6 +480,7 @@ footer {
 .insta-item {
   flex: 0 1 320px; /* Uniform sizing */
   max-width: 320px;
+  margin: 0;
 }
 
 /* Hidden items */
@@ -628,6 +629,7 @@ footer {
   height: 60px;          /* adjust logo size */
   width: auto;
 }
+
 
 
 
